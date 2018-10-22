@@ -1,0 +1,19 @@
+{% extends 'journal/base.html' %}
+
+{% block content %}
+    <div>
+        <h3>History:</h3>
+        <table class=".table-responsive-sm">
+            <th><h6>Date:</h6></th>
+            <th><h6>Completed:</h6></th>
+            <th><h6>Note:</h6></th>
+        {% for log in logs %}
+            <tr>
+                <td><p>{{ log.entry_date }}</p></td>
+                <td><p>{{ log.completed }}</p></td>
+                <td><p>{{ log.note }}</p></td>
+            </tr>
+        {% endfor %}
+        </table>
+    </div>
+{% endblock %}

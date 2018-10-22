@@ -1,0 +1,14 @@
+{% extends 'journal/base.html' %}
+
+{% block content %}
+
+<h3>{{ activity.activity_name }}</h3>
+<hr/>
+
+<p>{{ activity.instruction }}</p>
+
+<!--{% for activity in activity_list %}
+        <h3><a href="{% url 'activity_detail' pk=activity.pk %}">{{ activity.name }}</a></h3><p>{{ activity.instruction }}</p>
+    {% endfor %}
+-->
+{% endblock %}

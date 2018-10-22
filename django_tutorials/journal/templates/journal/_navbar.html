@@ -1,0 +1,50 @@
+{% load static %}
+
+<nav class="navbar navbar-default" style="background-color:#0297DB">
+    <a class="navbar-brand" href="/">
+        <img style="margin-top: -7px;" src="{% static 'journal/favicon/favicon32x32.png' %}" width="32" height="32" class="d-inline-block align-left" alt="">
+    </a>
+    <!--The collapse navbar button below does not work!!!-->
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+            <li class="nav-item activeb ">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/activity/">Activity</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/programming/">Programming</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Stringing</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/login/">Log In</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/register/">Register</a>
+            </li>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/about/">About</a>
+            </li>
+            <li class="dropdown">
+                <!-- row below should be class="nav-link dropdown-toggle"-->
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Stats <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu" style="background-color:#BBF417">
+                    <li><a href="/weighthistory/">Weight History</a></li>
+                    <li><a class="dropdown-item" href="/tennishistory/">Tennis History</a></li>
+                    <li><a class="dropdown-item" href="/stringinghistory/">Stringing History</a></li>
+                    <li><a class="dropdown-item" href="/workouthistory/">Workout History</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>

@@ -1,0 +1,23 @@
+{% load static %}
+
+<html lang="en">
+    <head>
+        <link rel="shortcut icon" href="{% static 'journal/favicon/favicon.ico' %}">
+        <link rel="stylesheet" href="{% static 'journal/bootstrap/css/bootstrap.css' %}">
+<!--        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">-->
+        <link rel="stylesheet" type="text/css" href="{% static 'journal/style.css' %}">
+        <meta charset="UTF-8">
+        <title>Aceh40 - Home</title>
+    </head>
+    <body>
+		<div class="border-row" style="width: 100%; margin-bottom: 10px"></div>
+        {% include "journal/_navbar.html" %}
+		<div class="border-row" style="width: 100%; margin-bottom: 150px"></div>
+        <div class="container" style="min-height:100%">
+        <div>
+            {% block content %}
+            {% endblock%}
+        </div>
+    </body>
+</html>

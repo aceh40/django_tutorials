@@ -1,0 +1,27 @@
+{% extends "catalog/base_generic.html" %}
+
+{% block content %}
+    <h1>Author:</h1>
+
+    <p>{{ author.id }}</p>
+    <p><strong>Last Name:</strong> {{ author.last_name }}</p> <!-- author detail link not yet defined -->
+    <p><strong>First Name:</strong> {{ author.first_name }}</p> <!-- author detail link not yet defined -->
+    <p><strong>Date of Birth:</strong> {{ author.date_of_birth }}</p> <!-- author detail link not yet defined -->
+    <p><strong>Date of Death:</strong> {{ author.date_of_death }}</p> <!-- author detail link not yet defined -->
+    <br/>
+    <span>
+        <a href="{% url 'catalog:author_update' pk=author.pk %}"><h6>Update</h6></a>
+        <a href="{% url 'catalog:author_delete' pk=author.pk %}"><h6>Delete</h6></a>
+    </span>
+
+
+    <div style="margin-left:20px;margin-top:20px">
+        <h4>Books</h4>
+
+        {% for book in author.book_set.all %}
+            <hr>
+        <p><a href="{{ book.get_absolute_url }}">{{ book.title }}</a></p>
+        {% endfor %}
+    </div>
+
+{% endblock %}
